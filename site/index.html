@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>OZS Studio · Bağımsız mobil oyunlar</title>
+<meta name="description" content="OZS Studio'nun oyunları: YOL: Kafesten Kemere ve Bit Pazarı. App Store ve Google Play'de ücretsiz.">
+<meta name="theme-color" content="#0c0c0e">
+<meta property="og:type" content="website">
+<meta property="og:title" content="OZS Studio">
+<meta property="og:description" content="YOL: Kafesten Kemere ve Bit Pazarı. Ücretsiz indir.">
+<meta property="og:image" content="/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23f2c14e'/%3E%3Ctext x='32' y='42' font-family='Arial Black,Arial' font-weight='900' font-size='24' text-anchor='middle' fill='%230c0c0e'%3EOZS%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cinzel:wght@900&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0c0c0e;--fg:#f4f2ee;--muted:#9a9aa3;--line:rgba(255,255,255,.08);--gold:#f2c14e}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;color:var(--fg);font-family:Nunito,system-ui,-apple-system,sans-serif;font-weight:700;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+  background:radial-gradient(60% 40% at 20% 0%,rgba(225,45,45,.16),transparent 70%),radial-gradient(60% 40% at 85% 8%,rgba(232,171,60,.14),transparent 70%),var(--bg)}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+
+header.wrap{padding:64px 16px 36px;text-align:center}
+.logo{display:inline-grid;place-items:center;width:76px;height:76px;border-radius:20px;background:var(--gold);color:var(--bg);font-family:"Archivo Black",Arial Black,sans-serif;font-size:26px;letter-spacing:-.02em;box-shadow:0 14px 40px rgba(242,193,78,.25)}
+h1{font-family:"Archivo Black",Arial Black,sans-serif;font-size:clamp(40px,9vw,72px);line-height:1;margin:22px 0 10px;letter-spacing:-.02em}
+.tag{color:var(--muted);font-size:clamp(16px,2.2vw,19px);margin:0 auto;max-width:520px;line-height:1.5}
+.ig{display:inline-flex;align-items:center;gap:8px;margin-top:20px;color:var(--fg);text-decoration:none;font-size:15px;padding:9px 16px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.04)}
+.ig svg{width:18px;height:18px}
+.ig:hover{background:rgba(255,255,255,.08)}
+
+.games.wrap{display:grid;gap:28px;padding:20px 16px 40px}
+.game{position:relative;border-radius:28px;overflow:hidden;display:grid;grid-template-columns:1fr 1.05fr;align-items:center;gap:20px;padding:40px;border:1px solid var(--line)}
+.game .info{position:relative;z-index:1}
+.gh{display:flex;align-items:center;gap:16px;margin-bottom:18px}
+.gh img{width:84px;height:84px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.5)}
+.pill{display:inline-block;font-size:12px;font-weight:900;letter-spacing:.08em;padding:4px 9px;border-radius:7px;margin-bottom:6px}
+.game h2{margin:0;line-height:1.05}
+.game p.d{font-size:17px;line-height:1.55;margin:0 0 22px;max-width:460px}
+.feats{list-style:none;padding:0;margin:0 0 26px;display:flex;flex-wrap:wrap;gap:8px}
+.feats li{font-size:13px;padding:6px 11px;border-radius:999px;background:rgba(255,255,255,.07)}
+.stores{display:flex;flex-wrap:wrap;gap:12px}
+.st{display:inline-flex;align-items:center;gap:10px;background:#000;color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.35);border-radius:13px;padding:9px 18px 9px 14px;transition:transform .15s}
+.st:hover{transform:translateY(-2px)}
+.st svg{width:26px;height:26px;flex:none}
+.st span{line-height:1.1}
+.st small{display:block;font-size:11px;opacity:.85}
+.st b{display:block;font-size:18px;font-family:-apple-system,"SF Pro Display",Nunito,sans-serif;font-weight:700}
+.st.soon{opacity:.55;pointer-events:none}
+.shots{position:relative;height:470px}
+.shots img{position:absolute;width:205px;height:auto;aspect-ratio:540/1170;object-fit:cover;border-radius:24px;border:6px solid #111;box-shadow:0 24px 50px rgba(0,0,0,.55)}
+.shots img:nth-child(1){left:6%;top:40px;transform:rotate(-7deg)}
+.shots img:nth-child(2){left:calc(50% - 102px);top:0;z-index:2}
+.shots img:nth-child(3){right:6%;top:40px;transform:rotate(7deg)}
+
+/* YOL */
+.yol{background:radial-gradient(70% 90% at 90% 50%,rgba(220,38,38,.28),transparent 70%),linear-gradient(135deg,#171013,#0e0e11)}
+.yol .pill{background:#dc2626;color:#fff}
+.yol h2{font-family:"Archivo Black",Arial Black,sans-serif;font-size:clamp(30px,4.6vw,46px);text-transform:uppercase;letter-spacing:-.01em}
+.yol h2 em{font-style:normal;color:var(--gold);display:block;font-size:.55em;letter-spacing:.04em}
+.yol p.d{color:#d6d0cc}
+/* Bit Pazarı */
+.bp{background:radial-gradient(70% 90% at 90% 50%,rgba(232,171,60,.22),transparent 70%),linear-gradient(135deg,#14352f,#0d1f1c)}
+.bp .pill{background:#e8ab3c;color:#2b1a0f}
+.bp h2{font-family:Cinzel,Georgia,serif;font-weight:900;font-size:clamp(34px,5vw,50px);color:#e8ab3c;text-shadow:0 3px 0 #5a3a0c}
+.bp h2 em{font-style:normal;display:block;font-size:.4em;color:#f5e8cc;letter-spacing:.06em;text-shadow:none;margin-top:4px}
+.bp p.d{color:#d8e4df}
+.bp .feats li{background:rgba(245,232,204,.09)}
+
+@media (max-width:860px){
+  .game{grid-template-columns:1fr;padding:28px 20px 8px;text-align:center}
+  .gh{justify-content:center;flex-direction:column;gap:12px}
+  .game p.d{margin-left:auto;margin-right:auto}
+  .feats,.stores{justify-content:center}
+  .shots{height:380px;max-width:420px;width:100%;margin:6px auto 0}
+  .shots img{width:160px;border-width:5px;border-radius:20px}
+  .shots img:nth-child(1){left:0}.shots img:nth-child(2){left:calc(50% - 80px)}.shots img:nth-child(3){right:0}
+}
+@media (max-width:400px){.shots{height:330px}.shots img{width:136px}.shots img:nth-child(2){left:calc(50% - 68px)}}
+
+footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:10px 22px;justify-content:space-between}
+footer nav{display:flex;flex-wrap:wrap;gap:16px}
+footer a{color:var(--muted)}
+</style>
+</head>
+<body>
+<header class="wrap">
+  <div class="logo">OZS</div>
+  <h1>OZS Studio</h1>
+  <p class="tag">İstanbul'dan bağımsız bir oyun stüdyosu. Hikâyesi olan, bırakması zor mobil oyunlar yapıyoruz.</p>
+  <a class="ig" href="https://www.instagram.com/ozseslilergames/" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+    @ozseslilergames
+  </a>
+</header>
+
+<main class="wrap games">
+
+  <article class="game yol" id="yol">
+    <div class="info">
+      <div class="gh">
+        <img src="/img/yol-icon.png" alt="YOL simgesi" width="84" height="84">
+        <div><span class="pill">MMA KARİYER</span><h2>YOL<em>KAFESTEN KEMERE</em></h2></div>
+      </div>
+      <p class="d">Sokaktan dünya şampiyonluğuna. Kafeste kendi elinle dövüş, kampını yönet, rakiplerini nakavt et ve kemere uzan.</p>
+      <ul class="feats"><li>🥊 Canlı dövüş</li><li>🏆 Kariyer modu</li><li>⭐ Efsaneler</li><li>🧑‍⚖️ Hakem ve Antrenör modu</li></ul>
+      <div class="stores">
+        <a class="st" href="https://apps.apple.com/tr/app/id6823537918" aria-label="YOL'u App Store'dan indir">
+          <svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.19-1.73-1.36-.14-2.65.8-3.34.8-.69 0-1.75-.78-2.88-.76-1.48.02-2.85.86-3.61 2.19-1.54 2.67-.39 6.62 1.11 8.79.73 1.06 1.6 2.25 2.75 2.2 1.1-.04 1.52-.71 2.85-.71 1.33 0 1.71.71 2.88.69 1.19-.02 1.94-1.08 2.66-2.14.84-1.23 1.19-2.42 1.21-2.48-.03-.01-2.32-.89-2.32-3.54zM14.18 6.12c.61-.74 1.02-1.76.91-2.78-.88.04-1.94.59-2.57 1.32-.56.65-1.06 1.69-.93 2.69.98.08 1.98-.5 2.59-1.23z"/></svg>
+          <span><small>App Store'dan</small><b>İndir</b></span>
+        </a>
+        <a class="st" href="https://play.google.com/store/apps/details?id=com.yolmma.game" aria-label="YOL'u Google Play'den indir">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2.8v18.4c0 .3.3.5.6.4l.1-.1L14.6 12 4.7 2.5c-.3-.2-.7 0-.7.3z" fill="#34a853"/><path d="M17.9 8.8 14.6 12l3.3 3.2 3.4-1.9c.9-.5.9-1.8 0-2.3z" fill="#fbbc04"/><path d="M4.7 21.5c.2.1.4.1.6 0l12.6-7.3-3.3-3.2z" fill="#ea4335"/><path d="M4.7 2.5 14.6 12l3.3-3.2L5.3 2.5c-.2-.1-.4-.1-.6 0z" fill="#4285f4"/></svg>
+          <span><small>Google Play'den</small><b>İndir</b></span>
+        </a>
+      </div>
+    </div>
+    <div class="shots" aria-hidden="true">
+      <img src="/img/yol-kariyer.webp" alt="" width="540" height="1170" loading="lazy">
+      <img src="/img/yol-dovus.webp" alt="" width="540" height="1170">
+      <img src="/img/yol-kemer.webp" alt="" width="540" height="1170" loading="lazy">
+    </div>
+  </article>
+
+  <article class="game bp" id="bit-pazari">
+    <div class="info">
+      <div class="gh">
+        <img src="/img/bp-icon.png" alt="Bit Pazarı simgesi" width="84" height="84">
+        <div><span class="pill">ANTİKA AL-SAT</span><h2>Bit Pazarı<em>ANTİKA SİMÜLATÖRÜ</em></h2></div>
+      </div>
+      <p class="d">Dededen kalma dükkânı devral, müşterilerle pazarlık et, mezatlardan hazine çıkar. Ucuza al, iyi incele, doğru fiyata sat.</p>
+      <ul class="feats"><li>🤝 Pazarlık</li><li>🔨 Mezatlar</li><li>🏚️ Ev Boşaltma</li><li>🛵 Garaj</li><li>⛏️ Anadolu Kazısı</li></ul>
+      <div class="stores">
+        <a class="st" href="https://apps.apple.com/tr/app/id6829169123" aria-label="Bit Pazarı'nı App Store'dan indir">
+          <svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.19-1.73-1.36-.14-2.65.8-3.34.8-.69 0-1.75-.78-2.88-.76-1.48.02-2.85.86-3.61 2.19-1.54 2.67-.39 6.62 1.11 8.79.73 1.06 1.6 2.25 2.75 2.2 1.1-.04 1.52-.71 2.85-.71 1.33 0 1.71.71 2.88.69 1.19-.02 1.94-1.08 2.66-2.14.84-1.23 1.19-2.42 1.21-2.48-.03-.01-2.32-.89-2.32-3.54zM14.18 6.12c.61-.74 1.02-1.76.91-2.78-.88.04-1.94.59-2.57 1.32-.56.65-1.06 1.69-.93 2.69.98.08 1.98-.5 2.59-1.23z"/></svg>
+          <span><small>App Store'dan</small><b>İndir</b></span>
+        </a>
+        <span class="st soon" aria-label="Google Play yakında">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2.8v18.4c0 .3.3.5.6.4l.1-.1L14.6 12 4.7 2.5c-.3-.2-.7 0-.7.3z" fill="#34a853"/><path d="M17.9 8.8 14.6 12l3.3 3.2 3.4-1.9c.9-.5.9-1.8 0-2.3z" fill="#fbbc04"/><path d="M4.7 21.5c.2.1.4.1.6 0l12.6-7.3-3.3-3.2z" fill="#ea4335"/><path d="M4.7 2.5 14.6 12l3.3-3.2L5.3 2.5c-.2-.1-.4-.1-.6 0z" fill="#4285f4"/></svg>
+          <span><small>Google Play</small><b>Yakında</b></span>
+        </span>
+      </div>
+    </div>
+    <div class="shots" aria-hidden="true">
+      <img src="/img/bp-ev.webp" alt="" width="540" height="1174" loading="lazy">
+      <img src="/img/bp-pazarlik.webp" alt="" width="540" height="1174">
+      <img src="/img/bp-garaj.webp" alt="" width="540" height="1174" loading="lazy">
+    </div>
+  </article>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 OZS Studio · İstanbul</span>
+    <nav>
+      <a href="https://www.instagram.com/ozseslilergames/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://bitpazari.vercel.app">Bit Pazarı</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
