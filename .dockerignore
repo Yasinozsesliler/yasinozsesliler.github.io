@@ -4,3 +4,6 @@ README.md
 index.html
 app-ads.txt
 .nojekyll
+site/Dockerfile
+site/nginx.conf
+site/.dockerignore
