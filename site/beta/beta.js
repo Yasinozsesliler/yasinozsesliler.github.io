@@ -1,6 +1,6 @@
 // OZS Studio kapalı beta formları → Google Sheet (Google Apps Script web uygulaması)
 // Apps Script'i yayınladıktan sonra aldığın "Web uygulaması URL'sini" aşağıya yapıştır.
-var BETA_ENDPOINT = "";
+var BETA_ENDPOINT = "https://script.google.com/macros/s/AKfycbzQ5jMag85ZPLQzWVkdg4Ij1PAWwwjk3IDFxLp1Ak1R9w1APr461SpqwbB_2_4fLjp2/exec";
 
 (function () {
   var q = new URLSearchParams(location.search);
