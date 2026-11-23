@@ -101,6 +101,52 @@ html{scroll-behavior:smooth}
 }
 @media (max-width:400px){.shots{height:330px}.shots img{width:136px}.shots img:nth-child(2){left:calc(50% - 68px)}}
 
+/* Kapalı beta formları */
+.st.beta-btn{background:var(--acc);color:var(--acc-ink);border-color:transparent}
+.st.beta-btn small{opacity:.8}
+.beta{scroll-margin-top:16px;border-radius:28px;border:1px solid var(--line);padding:34px 40px;display:grid;grid-template-columns:.9fr 1.1fr;gap:34px;align-items:start;margin-top:-12px}
+.beta.bp{--acc:#e8ab3c;--acc-ink:#2b1a0f}
+.beta.rf{--acc:#facc15;--acc-ink:#1a1300}
+.bp .st.beta-btn{--acc:#e8ab3c;--acc-ink:#2b1a0f}
+.rf .st.beta-btn{--acc:#facc15;--acc-ink:#1a1300}
+.beta .bpill{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:900;letter-spacing:.1em;padding:5px 10px;border-radius:7px;background:var(--acc);color:var(--acc-ink)}
+.beta .bpill i{width:7px;height:7px;border-radius:50%;background:currentColor;animation:blink 1.4s infinite}
+@keyframes blink{50%{opacity:.25}}
+.beta h3{font-size:clamp(24px,3.4vw,32px);line-height:1.1;margin:14px 0 12px}
+.beta .bl{color:#d6d6da;font-size:16px;line-height:1.55;margin:0 0 18px}
+.steps{list-style:none;padding:0;margin:0;display:grid;gap:11px;counter-reset:s}
+.steps li{display:flex;gap:12px;font-size:14.5px;line-height:1.45;color:#d6d6da}
+.steps li::before{counter-increment:s;content:counter(s);flex:none;display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.08);color:var(--acc);font-weight:900}
+.steps strong{color:var(--fg)}
+.bform{background:rgba(0,0,0,.35);border:1px solid var(--line);border-radius:20px;padding:24px}
+.bform .row{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
+.f{margin-bottom:14px}
+.f label{display:block;font-size:14px;margin-bottom:6px}
+.f label span{color:var(--muted)}
+.f input{width:100%;font:inherit;color:var(--fg);background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:12px;padding:12px 14px;outline:none}
+.f input::placeholder{color:#6f6f78}
+.f input:focus{border-color:var(--acc)}
+.f .hint{font-size:12.5px;color:var(--muted);margin-top:6px;line-height:1.45}
+.f .msg{display:none;color:#f87171;font-size:13px;margin-top:6px}
+.f.err input{border-color:#ef4444}.f.err .msg{display:block}
+.chk{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;line-height:1.45;color:#d6d6da;margin:4px 0 10px;cursor:pointer}
+.chk input{margin:2px 0 0;width:18px;height:18px;flex:none;accent-color:var(--acc)}
+.chk.err{color:#f87171}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.bform button{width:100%;margin-top:6px;font:900 17px Nunito,system-ui,sans-serif;color:var(--acc-ink);background:var(--acc);border:0;border-radius:14px;padding:15px;cursor:pointer}
+.bform button:disabled{opacity:.6;cursor:wait}
+.bform button:focus-visible,.f input:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.formerr{display:none;margin-top:10px;color:#f87171;font-size:14px;text-align:center}
+.bform .ios{margin:14px 0 0;font-size:13px;color:var(--muted);text-align:center}
+.bform .ios a{color:var(--acc)}
+.done{display:none;text-align:center;padding:16px 0}
+.done .ok{display:grid;place-items:center;width:60px;height:60px;margin:0 auto 12px;border-radius:50%;background:var(--acc);color:var(--acc-ink);font-size:30px}
+.done h4{font-size:22px;margin:0 0 8px}
+.done p{color:#d6d6da;line-height:1.55;margin:0}
+.beta.sent form{display:none}.beta.sent .done{display:block}
+@media (max-width:860px){.beta{grid-template-columns:1fr;padding:26px 18px;gap:22px;margin-top:-14px}.bform{padding:20px 16px}.bform .row{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.beta .bpill i{animation:none}}
+
 footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--muted);font-size:14px}
 footer .wrap{display:flex;flex-wrap:wrap;gap:10px 22px;justify-content:space-between}
 footer nav{display:flex;flex-wrap:wrap;gap:16px}
@@ -164,10 +210,10 @@ footer a{color:var(--muted)}
           <svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.19-1.73-1.36-.14-2.65.8-3.34.8-.69 0-1.75-.78-2.88-.76-1.48.02-2.85.86-3.61 2.19-1.54 2.67-.39 6.62 1.11 8.79.73 1.06 1.6 2.25 2.75 2.2 1.1-.04 1.52-.71 2.85-.71 1.33 0 1.71.71 2.88.69 1.19-.02 1.94-1.08 2.66-2.14.84-1.23 1.19-2.42 1.21-2.48-.03-.01-2.32-.89-2.32-3.54zM14.18 6.12c.61-.74 1.02-1.76.91-2.78-.88.04-1.94.59-2.57 1.32-.56.65-1.06 1.69-.93 2.69.98.08 1.98-.5 2.59-1.23z"/></svg>
           <span><small>App Store'dan</small><b>İndir</b></span>
         </a>
-        <span class="st soon" aria-label="Google Play yakında">
+        <a class="st beta-btn" href="#beta-bit-pazari" aria-label="Bit Pazarı Android kapalı betasına katıl">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2.8v18.4c0 .3.3.5.6.4l.1-.1L14.6 12 4.7 2.5c-.3-.2-.7 0-.7.3z" fill="#34a853"/><path d="M17.9 8.8 14.6 12l3.3 3.2 3.4-1.9c.9-.5.9-1.8 0-2.3z" fill="#fbbc04"/><path d="M4.7 21.5c.2.1.4.1.6 0l12.6-7.3-3.3-3.2z" fill="#ea4335"/><path d="M4.7 2.5 14.6 12l3.3-3.2L5.3 2.5c-.2-.1-.4-.1-.6 0z" fill="#4285f4"/></svg>
-          <span><small>Google Play</small><b>Yakında</b></span>
-        </span>
+          <span><small>Android</small><b>Betaya katıl</b></span>
+        </a>
       </div>
     </div>
     <div class="shots" aria-hidden="true">
@@ -176,6 +222,38 @@ footer a{color:var(--muted)}
       <img src="/img/bp-garaj.webp" alt="" width="540" height="1174" loading="lazy">
     </div>
   </article>
+  <section class="beta bp" id="beta-bit-pazari">
+    <div>
+      <span class="bpill"><i></i>ANDROID KAPALI BETA</span>
+      <h3>Bit Pazarı Android'e geliyor</h3>
+      <p class="bl">Pazarlık et, mezattan hazine çıkar, doğru fiyata sat. Android sürümünü ilk oynayacak dükkân sahiplerini arıyoruz. Kapalı betaya katıl, herkesten önce oyna.</p>
+      <ol class="steps">
+        <li><span><strong>Formu doldur.</strong> Google Play'de kullandığın Gmail adresini yaz.</span></li>
+        <li><span><strong>Davet Gmail'ine gelsin.</strong> Seni test listesine ekleyip katılma linkini gönderiyoruz.</span></li>
+        <li><span><strong>14 gün telefonunda tut.</strong> Google'ın kuralı: test 14 gün sürüyor. Senin sayende oyun Google Play'de herkese açılabiliyor.</span></li>
+      </ol>
+    </div>
+    <div class="bform">
+      <form class="beta-form" novalidate>
+        <input type="hidden" name="game" value="bit-pazari">
+        <input type="hidden" name="utm_source"><input type="hidden" name="utm_medium"><input type="hidden" name="utm_campaign"><input type="hidden" name="utm_content"><input type="hidden" name="ref">
+        <div class="hp" aria-hidden="true"><label>Web sitesi <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+        <div class="row">
+          <div class="f"><label for="bit-pazari-name">Adın</label><input id="bit-pazari-name" type="text" name="name" autocomplete="given-name" maxlength="60" placeholder="Örn. Ahmet"><div class="msg">Adını yazar mısın?</div></div>
+          <div class="f"><label for="bit-pazari-device">Telefonun <span>(isteğe bağlı)</span></label><input id="bit-pazari-device" type="text" name="device" maxlength="60" placeholder="Örn. Samsung A54"></div>
+        </div>
+        <div class="f"><label for="bit-pazari-email">Gmail adresin</label><input id="bit-pazari-email" type="email" name="email" autocomplete="email" inputmode="email" maxlength="120" placeholder="ornek@gmail.com"><div class="hint">Telefonundaki Google Play'de açık olan hesap olmalı, davet bu adrese gelir.</div><div class="msg">Geçerli bir e-posta adresi yaz.</div></div>
+        <div class="f"><label for="bit-pazari-ig">Instagram kullanıcı adın <span>(isteğe bağlı)</span></label><input id="bit-pazari-ig" type="text" name="instagram" maxlength="40" placeholder="@kullaniciadi" autocapitalize="off"></div>
+        <label class="chk"><input type="checkbox" name="android" value="evet"> Android telefonum var.</label>
+        <label class="chk"><input type="checkbox" name="consent" value="evet"> Bilgilerimin yalnızca bu beta daveti için kullanılmasını kabul ediyorum. Beta bitince silinir.</label>
+        <button type="submit">Betaya katıl</button>
+        <div class="formerr" role="alert"></div>
+        <p class="ios">iPhone'dasın mı? Bit Pazarı <a href="https://apps.apple.com/tr/app/id6829169123">App Store'da</a> zaten çıktı.</p>
+      </form>
+      <div class="done" role="status"><div class="ok">✓</div><h4>Kaydın alındı!</h4><p>Davet linkini Gmail'ine göndereceğiz. Gelen kutunu ve "Promosyonlar" klasörünü kontrol etmeyi unutma.</p></div>
+    </div>
+  </section>
+
 
   <article class="game rf" id="refmania">
     <div class="info">
@@ -190,10 +268,10 @@ footer a{color:var(--muted)}
           <svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.19-1.73-1.36-.14-2.65.8-3.34.8-.69 0-1.75-.78-2.88-.76-1.48.02-2.85.86-3.61 2.19-1.54 2.67-.39 6.62 1.11 8.79.73 1.06 1.6 2.25 2.75 2.2 1.1-.04 1.52-.71 2.85-.71 1.33 0 1.71.71 2.88.69 1.19-.02 1.94-1.08 2.66-2.14.84-1.23 1.19-2.42 1.21-2.48-.03-.01-2.32-.89-2.32-3.54zM14.18 6.12c.61-.74 1.02-1.76.91-2.78-.88.04-1.94.59-2.57 1.32-.56.65-1.06 1.69-.93 2.69.98.08 1.98-.5 2.59-1.23z"/></svg>
           <span><small>App Store'dan</small><b>İndir</b></span>
         </a>
-        <span class="st soon" aria-label="Google Play yakında">
+        <a class="st beta-btn" href="#beta-refmania" aria-label="Refmania Android kapalı betasına katıl">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2.8v18.4c0 .3.3.5.6.4l.1-.1L14.6 12 4.7 2.5c-.3-.2-.7 0-.7.3z" fill="#34a853"/><path d="M17.9 8.8 14.6 12l3.3 3.2 3.4-1.9c.9-.5.9-1.8 0-2.3z" fill="#fbbc04"/><path d="M4.7 21.5c.2.1.4.1.6 0l12.6-7.3-3.3-3.2z" fill="#ea4335"/><path d="M4.7 2.5 14.6 12l3.3-3.2L5.3 2.5c-.2-.1-.4-.1-.6 0z" fill="#4285f4"/></svg>
-          <span><small>Google Play</small><b>Yakında</b></span>
-        </span>
+          <span><small>Android</small><b>Betaya katıl</b></span>
+        </a>
       </div>
     </div>
     <div class="shots" aria-hidden="true">
@@ -202,6 +280,38 @@ footer a{color:var(--muted)}
       <img src="/img/rf-karar.webp" alt="" width="540" height="1170" loading="lazy">
     </div>
   </article>
+  <section class="beta rf" id="beta-refmania">
+    <div>
+      <span class="bpill"><i></i>ANDROID KAPALI BETA</span>
+      <h3>Refmania Android'e geliyor</h3>
+      <p class="bl">Düdük sende. Android sürümünü ilk oynayacak hakemleri arıyoruz. Kapalı betaya katıl, herkesten önce oyna, fikirlerinle oyunu birlikte şekillendirelim.</p>
+      <ol class="steps">
+        <li><span><strong>Formu doldur.</strong> Google Play'de kullandığın Gmail adresini yaz.</span></li>
+        <li><span><strong>Davet Gmail'ine gelsin.</strong> Seni test listesine ekleyip katılma linkini gönderiyoruz.</span></li>
+        <li><span><strong>14 gün telefonunda tut.</strong> Google'ın kuralı: test 14 gün sürüyor. Senin sayende oyun Google Play'de herkese açılabiliyor.</span></li>
+      </ol>
+    </div>
+    <div class="bform">
+      <form class="beta-form" novalidate>
+        <input type="hidden" name="game" value="refmania">
+        <input type="hidden" name="utm_source"><input type="hidden" name="utm_medium"><input type="hidden" name="utm_campaign"><input type="hidden" name="utm_content"><input type="hidden" name="ref">
+        <div class="hp" aria-hidden="true"><label>Web sitesi <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+        <div class="row">
+          <div class="f"><label for="refmania-name">Adın</label><input id="refmania-name" type="text" name="name" autocomplete="given-name" maxlength="60" placeholder="Örn. Ahmet"><div class="msg">Adını yazar mısın?</div></div>
+          <div class="f"><label for="refmania-device">Telefonun <span>(isteğe bağlı)</span></label><input id="refmania-device" type="text" name="device" maxlength="60" placeholder="Örn. Samsung A54"></div>
+        </div>
+        <div class="f"><label for="refmania-email">Gmail adresin</label><input id="refmania-email" type="email" name="email" autocomplete="email" inputmode="email" maxlength="120" placeholder="ornek@gmail.com"><div class="hint">Telefonundaki Google Play'de açık olan hesap olmalı, davet bu adrese gelir.</div><div class="msg">Geçerli bir e-posta adresi yaz.</div></div>
+        <div class="f"><label for="refmania-ig">Instagram kullanıcı adın <span>(isteğe bağlı)</span></label><input id="refmania-ig" type="text" name="instagram" maxlength="40" placeholder="@kullaniciadi" autocapitalize="off"></div>
+        <label class="chk"><input type="checkbox" name="android" value="evet"> Android telefonum var.</label>
+        <label class="chk"><input type="checkbox" name="consent" value="evet"> Bilgilerimin yalnızca bu beta daveti için kullanılmasını kabul ediyorum. Beta bitince silinir.</label>
+        <button type="submit">Betaya katıl</button>
+        <div class="formerr" role="alert"></div>
+        <p class="ios">iPhone'dasın mı? Refmania <a href="https://apps.apple.com/tr/app/id6835052862">App Store'da</a> zaten çıktı.</p>
+      </form>
+      <div class="done" role="status"><div class="ok">✓</div><h4>Kaydın alındı!</h4><p>Davet linkini Gmail'ine göndereceğiz. Gelen kutunu ve "Promosyonlar" klasörünü kontrol etmeyi unutma.</p></div>
+    </div>
+  </section>
+
 
 </main>
 
@@ -217,5 +327,6 @@ footer a{color:var(--muted)}
     </nav>
   </div>
 </footer>
+<script src="/beta/beta.js"></script>
 </body>
 </html>
